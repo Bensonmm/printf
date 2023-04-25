@@ -10,7 +10,7 @@ course requirement for grading.
 
 This function _printf() writes output to stdout, the standard output stream
 with the format and options without making use of any of the standard library
-files. It was written to use a local buffer of 1024 bytes when printing 
+files. It was written to use a local buffer of 1024 bytes when printing
 although it can print larger sets of data.
 
 The _printf() function returns the total number of characters printed to the
@@ -46,27 +46,27 @@ conversion specifier. In between there may be (in this order):
 
 Flag	Description
 
-#	
+#
 
 For o conversions the first character of the output string is made zero
 (by prefixing a 0 if it was not zero already). For x and X conversions,
 a nonzero result has the string "0x" or "0X" respectively added.
 
-0	
+0
 
 (Not implemented yet) The value should be zero padded. For d, i, o, u, x, and X
 the converted value is padded on the left with zeros.
-If the 0 and - flags both appear,the 0 flag is ignored. 
+If the 0 and - flags both appear,the 0 flag is ignored.
 If a precision is given with a numeric conversion, the 0 flag is ignored.
 
--	
+-
 
 (Minus sign, not implemented yet) The converted value is to be left adjusted
 on the field boundary, (Default is right justification) and padded with blanks
 in the right rather than on the left with blanks or zeros.
 This flag overrides 0 if both are given.
-	
-' '	
+
+' '
 
 (Blank Space) The argument is padded with a single blank space before a
 positive number or empty string produced by a signed conversion.
@@ -93,7 +93,7 @@ printf("%*d", width, num);
 
 The precision
 
-An optional precision, in the form of a period ('.') followed by an optiona 
+An optional precision, in the form of a period ('.') followed by an optiona
 decimal digit string. A negative precision is taken as if the precision were
 omitted. This gives the minimum number of digits to appear for d, i, o, u, x,
 and X conversions, or the maximum number of characters to be printed from a
@@ -108,12 +108,12 @@ printf("%.*d", precision, num);
 The length modifiers
 
                              Modifier	Description
-							    
-							    
+
+
 l	An integer conversion to a long int or unsigned long int argument.
 
 h	An integer conversion to a short int or unsigned short int argument.
-             
+
 	      The conversion specifier
 
             Specifier	Description
@@ -124,7 +124,7 @@ present,it gives the minimum number of digits that must appear; if the
 converted value requires fewer digits, then it is padded with zeros on the
 left. Default precision is 1.
 
-**o, u, x, X	**  
+**o, u, x, X	**
 
 The argument is converted to unsigned octal (o), unsigned decimal (u), or
 unsigned hexamedical (x and X) notation. The letters abcdef are used for x
@@ -138,24 +138,24 @@ By default the precision is 1.
 The int argument is converted to an unsigned char and the resulting character
 is written. The representation of characters is based off the ASCII coding.
 
-** s **	
+** s **
 
-The argument received is expected to be a pointer type char * to an array 
+The argument received is expected to be a pointer type char * to an array
 of characters. Characters from this array are printed up to (but not including)
 a null byte ('\0'). If precision is specified, then this will determine how
 many characters are taken into account for printing.
 
-** p **	
+** p **
 
 A void * pointer argument is printed as hexadecimal in lower caps
 representing an adress in memory.
 
-** % **	
+** % **
 
 A ' % ' character is written and no conversion is made.
 The specification is as follows: %%.
 
-** b **	
+** b **
 
 The argument is converted to an unsigned int value and then operated to get
 its binary representation (base 2).
@@ -174,7 +174,7 @@ The argument received is expected to be a pointer type char * to an array
 of characters. Characters from this array are printed in reverse order up
 to (but not including) a null byte ('\0').
 
-** R **	
+** R **
 The argument received is expected to be a pointer type char * to an array of
 characters. Characters from this array are encoded to ROT13 and printed in
 order up to (but not including a null byte ('\0').
